@@ -5,10 +5,17 @@ class Greetin extends Component {
       return (
         <div>
               <h1>Task8</h1>
-                {/* {isSuccess ? <h4>success!</h4>:<h4></h4>} */}
+                 {isSuccess ? (
+                    <h4>success!</h4>
+                 ):(
+                     <h4>Error</h4>
+                 )} 
         </div>
         
       )
     }
   }
-  export default Greetin
+  export default function App(){
+    var isSuccess=true
+    return <Greetin isSuccess={isSuccess}/>
+  }
